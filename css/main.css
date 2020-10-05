@@ -1,0 +1,156 @@
+/* FONTS */
+@font-face {
+    font-family: 'slope_operaregular';
+    src: url('../assets/fonts/slope_opera-webfont.woff2') format('woff2'),
+            url('../assets/fonts/slope_opera-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '_pepsi_regular';
+    src: url('../assets/fonts/pepsi_pl-webfont.woff2') format('woff2'),
+            url('../assets/fonts/pepsi_pl-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* BASICS */
+:root {
+    --back-color: black;
+    --nav-color: white;
+    --nav-hover-color: blueviolet;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    background-color: var(--back-color);
+    background-position: top center;
+    margin: 0px 0px 0px 0px;
+}
+
+/* HEADER */
+
+header {
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+  .spacefinal {
+    display: none;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .spacefinalmobile {
+    display: none;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .headercontainer {
+    pointer-events: none;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    pointer-events: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'slope_operaregular';
+    background-color: transparent;
+  }
+  
+    .logo a {
+      color: var(--nav-color);
+      text-align: start;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: lighter;
+    }
+  
+    .logo a:hover {
+      background-color: transparent;
+      color: var(--nav-hover-color);
+    }
+  
+  .topnav {
+    pointer-events: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 18px;
+    margin-right: 18px;
+    background-color: transparent;
+  }
+  
+    .topnav a {
+      float: center;
+      color: var(--nav-color);
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      padding-left: 12px;
+    }
+  
+    .topnav a:hover {
+      background-color: transparent;
+      color: var(--nav-hover-color);
+    }
+  
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        .logo a { font-size: 16px; }
+    
+        .topnav a {
+        font-size: 12px;
+        margin-top: 18px;
+        }
+    }
+
+    /* 1000 and down */
+    @media only screen and (max-width: 1000px) {
+        .spacefinal {
+            display: none;
+        }
+
+        .spacefinalmobile {
+            display: block;
+        }
+    }
+
+    /* 1000 and up */
+    @media only screen and (min-width: 1001px) {
+        .spacefinal {
+            display: block;
+        }
+
+        .spacefinalmobile {
+            display: none;
+        }
+    }
