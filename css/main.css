@@ -27,6 +27,7 @@
 }
 
 html {
+    height: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -36,8 +37,9 @@ html {
 }
 
 body {
-    background-color: var(--back-color);
-    background-position: top center;
+    background: rgb(17,43,65);
+    background: linear-gradient(180deg, rgba(17,43,65,1) 0%, rgba(49,39,145,1) 33%, rgba(57,53,147,1) 66%, rgba(90,32,116,1) 99%);
+    background-position: center;
     margin: 0px 0px 0px 0px;
 }
 
@@ -123,34 +125,36 @@ header {
       color: var(--nav-hover-color);
     }
   
-    /* Extra small devices (phones, 600px and down) */
-    @media only screen and (max-width: 600px) {
-        .logo a { font-size: 16px; }
-    
-        .topnav a {
-        font-size: 12px;
-        margin-top: 18px;
-        }
-    }
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+      .logo a { font-size: 16px; }
+  
+      .topnav a {
+      font-size: 12px;
+      margin-top: 18px;
+      }
+  }
 
-    /* 1000 and down */
-    @media only screen and (max-width: 1000px) {
-        .spacefinal {
-            display: none;
-        }
+  /* 1000 and down */
+  @media only screen and (max-width: 1000px) {
+      .spacefinal {
+          display: none;
+      }
 
-        .spacefinalmobile {
-            display: block;
-        }
-    }
+      .spacefinalmobile {
+          display: block;
+      }
+  }
 
-    /* 1000 and up */
-    @media only screen and (min-width: 1001px) {
-        .spacefinal {
-            display: block;
-        }
+  /* 1000 and up */
+  @media only screen and (min-width: 1001px) {
+      .spacefinal {
+          display: block;
+      }
 
-        .spacefinalmobile {
-            display: none;
-        }
-    }
+      .spacefinalmobile {
+          display: none;
+      }
+  }
+
+/* BODY */
