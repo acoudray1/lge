@@ -19,7 +19,7 @@
 :root {
     --back-color: black;
     --nav-color: white;
-    --nav-hover-color: blueviolet;
+    --nav-hover-color: rgba(119,113,247,1);
 }
 
 * {
