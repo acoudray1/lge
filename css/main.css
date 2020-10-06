@@ -160,5 +160,12 @@ header {
 
 .wrapper {
     height: 50vh;
-    background: linear-gradient(180deg, rgba(17,43,65,1) 0%, rgba(49,39,145,1) 33%, rgba(57,53,147,1) 66%, rgba(90,32,116,1) 99%);
+    background: linear-gradient(180deg, rgba(17,43,65,1) 0%, rgba(49,39,145,1) 33%, rgba(57,53,147,1) 66%, rgba(119,38,199,1) 99%);
+}
+
+/* 1000 and up */
+@media only screen and (min-width: 1001px) {
+    .wrapper {
+      height: 70vh;
+    }
 }
