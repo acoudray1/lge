@@ -163,6 +163,28 @@ header {
     background: linear-gradient(180deg, rgba(17,43,65,1) 0%, rgba(49,39,145,1) 33%, rgba(57,53,147,1) 66%, rgba(119,38,199,1) 99%);
 }
 
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.linkto {
+  height: 15vw;
+  width: 15vw;
+  color: white;
+  background-color: transparent;
+  font-size: x-large;
+  text-align: center;
+  margin: 2% 0% 2% 0%;
+  box-sizing: border-box;
+  border-color: #FFFFFF66;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 4px;
+}
+
+
 /* 1000 and up */
 @media only screen and (min-width: 1001px) {
     .wrapper {
