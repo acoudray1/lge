@@ -54,12 +54,14 @@ header {
     display: none;
     height: auto;
     max-width: 100%;
+    filter: blur(1px) brightness(80%);
   }
 
   .spacefinalmobile {
     display: none;
     height: auto;
     max-width: 100%;
+    filter: blur(1px) brightness(80%);
   }
   
   .headercontainer {
