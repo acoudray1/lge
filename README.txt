@@ -1,5 +1,6 @@
 -> Pour générer les images responsives : https://www.responsivebreakpoints.com/
 
+-> Font generator : https://www.fontsquirrel.com/tools/webfont-generator
 
 Palette 1:
 https://coolors.co/f72585-7209b7-3a0ca3-4361ee-4cc9f0
