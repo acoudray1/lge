@@ -232,6 +232,7 @@ header {
     color: var(--nav-color);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
+    margin-bottom: 0;
   }
 
   #texttoexpand {
@@ -240,8 +241,19 @@ header {
 
   #expand {
     color: var(--nav-color);
-    font-size: 4vw;
+    /*font-size: 4vw;*/
     cursor: pointer;
+    animation-name: makevisible;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+  }
+
+  @keyframes makevisible {
+    0% {opacity: 67%; font-size: 4vw;}
+    25% {opacity: 100%; font-size: 5vw;}
+    50% {opacity: 67%; font-size: 4vw;}
+    75% {opacity: 100%; font-size: 5vw;}
+    100% {opacity: 67%; font-size: 4vw;}
   }
 
 /* 1000 and up */
