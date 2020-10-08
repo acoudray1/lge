@@ -228,7 +228,7 @@ header {
 
   .projectdescription p {
     font-size: 3vw;
-    text-align: center;
+    text-align: justify;
     color: var(--nav-color);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
