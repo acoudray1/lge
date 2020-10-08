@@ -81,23 +81,21 @@ header {
     position: fixed;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
   
   .logo {
     pointer-events: visible;
-    top: 0;
-    left: 0;
-    margin-top: 10px;
-    margin-left: 10px;
     font-family: 'slope_operaregular';
     background-color: transparent;
+    margin-left: 2vw;
   }
   
     .logo a {
       color: var(--nav-color);
       text-align: start;
       text-decoration: none;
-      font-size: 24px;
+      font-size: 7vw;
       font-weight: lighter;
     }
   
@@ -108,11 +106,8 @@ header {
   
   .topnav {
     pointer-events: visible;
-    top: 0;
-    right: 0;
-    margin-top: 18px;
-    margin-right: 18px;
     background-color: transparent;
+    margin-right: 2vw;
   }
   
     .topnav a {
@@ -178,12 +173,6 @@ header {
   
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-      .logo a { font-size: 16px; }
-  
-      .topnav a {
-      font-size: 12px;
-      margin-top: 18px;
-      }
 
       .headercontainer { height: 120vw; }
 
@@ -215,7 +204,8 @@ header {
 
 .wrapper {
     height: 50vh;
-    background: linear-gradient(180deg, rgba(17,43,65,1) 0%, rgba(49,39,145,1) 33%, rgba(57,53,147,1) 66%, rgba(119,38,199,1) 99%);
+    background-color: var(--back-color);
+    background: linear-gradient(180deg, rgba(17,43,65,0.5) 0%, rgba(49,39,145,0.5) 33%, rgba(57,53,147,0.5) 66%, rgba(119,38,199,0.5) 99%);
 }
 
 .projectdescription {
