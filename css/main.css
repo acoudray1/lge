@@ -15,6 +15,14 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'robotolight';
+  src: url('../assets/fonts/roboto-light-webfont.woff2') format('woff2'),
+       url('../assets/fonts/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* BASICS */
 :root {
     --back-color: rgb(9,22,37);
@@ -38,10 +46,6 @@ html {
 }
 
 body {
-    /*background: rgb(9,22,37);
-    background: radial-gradient(circle at bottom right, rgba(42,28,33,1) 12%, rgba(9,22,37,1) 100%);*/
-    /*background: rgb(33,8,105);
-    background: radial-gradient(circle at bottom right, rgba(33,8,105,1) 8%, rgba(9,22,37,1) 79%);*/
     background: var(--back-color);
     background-position: center;
     margin: 0px 0px 0px 0px;
@@ -68,22 +72,22 @@ body {
   background: radial-gradient(
     circle at top left,
     var(--gradient-color), 
-    transparent 100px
+    transparent 20vw
   ),
   radial-gradient(
     circle at top right,
     var(--gradient-color), 
-    transparent 100px
+    transparent 20vw
   ),
   radial-gradient(
     at bottom left,
     var(--gradient-color), 
-    transparent 400px
+    transparent 80vw
   ),
   radial-gradient(
     at bottom right,
     var(--gradient-color), 
-    transparent 400px
+    transparent 80vw
   );
   opacity: 0.3;
 }
@@ -248,10 +252,6 @@ header {
 
 .wrapper {
     height: 50vh;
-    /*background: rgb(9,22,37);
-    background: radial-gradient(circle at top right, rgba(42,28,33,1) 12%, rgba(9,22,37,1) 100%);*/
-    /*background: rgb(33,8,105);
-    background: radial-gradient(circle at top right, rgba(33,8,105,1) 8%, rgba(9,22,37,1) 79%);*/
     position: relative;
     z-index: 15;
 }
@@ -270,6 +270,7 @@ header {
     color: var(--nav-color);
     font-weight: 300;
     margin-bottom: 0;
+    font-family: 'robotolight';
   }
 
   #texttoexpand {
