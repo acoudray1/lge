@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="https://kit.fontawesome.com/9c54d5cd50.js" crossorigin="anonymous"></script>
         <title>LGE PROJECT</title>
-      </head>
+    </head>
     <body>
         <header>
             <picture class="spacefinal">
@@ -75,8 +75,8 @@
                     “Future, Love & Death” entend téléporter l’auditeur dans un univers pré-apocalyptique et technologique, oscillant entre dystopie
                     romancée et réalité crue. Il dresse le portrait d’un monde qui s’épuise, friable, à plusieurs niveaux.
                 </p>
-                <div class="expand">...</div>
-                <p class="texttoexpand">
+                <div id="expand" onclick="expandText()">...</div>
+                <p id="texttoexpand">
                     Érosion des émotions, destruction de l’environnement, numérisation des relations, scandales politico-sexuels, nous évoluons dans un 
                     décor froid, terriblement rationnel et quasi-algorithmique. Peut-on le changer ? Si oui, comment ? Aimer, aider, inspirer, combattre,
                     détruire, renverser, fuir, sont autant de réponses explorées dans le projet. S’il est assez orwellien, il ne se veut pas négatif pour
@@ -88,5 +88,11 @@
             </div>
         </div>
         <script src="" async defer></script>
+        <script>
+            function expandText() {
+                document.getElementById("texttoexpand").style.display = "block";
+                document.getElementById("expand").style.display = "none";
+            }
+        </script>
     </body>
 </html>
