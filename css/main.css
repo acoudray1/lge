@@ -228,6 +228,8 @@ header {
     border-style: solid;
     border-radius: 100%;
     border-width: 4px;
+    cursor: pointer;
+    pointer-events: visible;
   }
 
     .linkto:hover {
