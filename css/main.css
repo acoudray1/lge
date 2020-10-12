@@ -205,23 +205,11 @@ header {
     justify-content: space-around;
   }
 
-  .listentotitle {
-    font-family: 'robotoregular';
-    color: var(--nav-color);
-    font-size: 6vw;
-    text-align: start;
-    margin: 0% var(--right-margin) 0% var(--left-margin);
-  }
-
-  .listentotitle span {
-    color: var(--nav-hover-color);
-  }
-
   .links {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: auto var(--right-margin) auto var(--left-margin);
+    margin: auto var(--right-margin) 4% var(--left-margin);
   }
 
   .linkto {
