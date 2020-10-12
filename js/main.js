@@ -33,9 +33,12 @@ function expandText() {
 window.onscroll = function() {
     let topbarOffset = offset(document.getElementById("topbar"));
     let bottombarOffset = offset(document.getElementById("bottombar"));
+    let bottombarHeight = document.getElementById("bottombar").offsetHeight;
+    let opacity = 0;
     if (topbarOffset.bottom < bottombarOffset.top) {
         document.getElementById("topbar").style.background = "transparent";
     } else if (topbarOffset.bottom >= bottombarOffset.top) {
-        document.getElementById("topbar").style.background = "black";
+        opacity = valueLimit((topbarOffset.bottom - bottombarOffset.top) / bottombarHeight, 0, 1);
+        document.getElementById("topbar").style.background = "rgb(9,22,37," + opacity + ")";
     }
 }
