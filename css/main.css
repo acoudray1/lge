@@ -33,6 +33,7 @@
 }
 
 /* BASICS */
+
 :root {
     --back-color: rgb(9,22,37);
     --nav-color: white;
@@ -45,7 +46,8 @@
     --linkto-icons-fontsize: 7vw;
     --fld-fontsize: 6vw;
     --description-fontsize: 3.5vw;
-    --footer-fontsize: 1.5;
+    --footer-fontsize: 1.5vw;
+    --spotify-height: 120vw;
 }
 
 * {
@@ -55,7 +57,6 @@
 html {
     height: 100%;
     min-height: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -226,20 +227,6 @@ header {
       color: var(--nav-hover-color);
     }
 
-  /* Large devices (laptops/desktops, 900px and up) */
-  @media only screen 
-    and (min-width: 900px)
-    and (max-width: 1199px) {
-      :root {
-        --left-margin: 3vw;
-      }
-  }
-
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-
-  }
-
 /* BODY */
 
 .wrapper {
@@ -249,14 +236,22 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: start;
+    margin: var(--right-margin) 0% var(--right-margin) 0%;
 }
 
-  .wrapper span {
+.about {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .about span {
     font-family: 'slope_operaregular';
     color: var(--nav-color);
     font-size: var(--fld-fontsize);
     text-align: start;
-    margin: 5% var(--right-margin) 2% var(--left-margin);
+    margin: 0% var(--right-margin) 2% var(--left-margin);
   }
 
 .projectdescription {
@@ -293,6 +288,7 @@ header {
 
   .spotifypreview {
     margin: 5% var(--right-margin) 5% var(--left-margin);
+    height: var(--spotify-height);
   }
 
   @keyframes makevisible {
@@ -324,4 +320,46 @@ footer {
     font-size: var(--footer-fontsize);
     letter-spacing: 0.4vw;
     color: white;
+  }
+
+/* RESPONSIVITY */
+
+  /* Large devices (laptops/desktops, 900px and up) */
+  @media only screen 
+    and (min-width: 900px)
+    and (max-width: 1199px) {
+      :root {
+        --logo-fontsize: 6vw;
+        --profile-icons-fontsize: 3vw;
+        --linkto-icons-fontsize: 5vw;
+        --fld-fontsize: 3.5vw;
+        --description-fontsize: 2vw;
+        --footer-fontsize: 0.8vw;
+        --spotify-height: 50vw;
+      }
+
+      .linkto {
+        height: 12vw;
+        width: 12vw;
+      }
+
+      .wrapper {
+        margin-bottom: 7vw;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .about {
+        width: 70vw;
+      }
+
+      .projectdescription {
+        padding-right: 0;
+      }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+
   }
