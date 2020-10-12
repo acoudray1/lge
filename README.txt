@@ -26,13 +26,13 @@ Responsive properties:
  /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen 
   and (min-width: 600px)
-  and (max-width: 991px) {
+  and (max-width: 899px) {
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 900px and up) */
 @media only screen 
-  and (min-width: 992px)
+  and (min-width: 900px)
   and (max-width: 1199px) {
 
 }

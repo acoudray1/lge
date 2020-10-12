@@ -35,12 +35,17 @@
 /* BASICS */
 :root {
     --back-color: rgb(9,22,37);
-    --back-color-lighter: rgb(82,53,192);
     --nav-color: white;
     --nav-hover-color: rgba(119,113,247,1);
     --gradient-color:  rgba(68,26,135,0.94);
     --left-margin: 7vw;
-    --right-margin: 7vw
+    --right-margin: 7vw;
+    --logo-fontsize: 9vw;
+    --profile-icons-fontsize: 4vw;
+    --linkto-icons-fontsize: 7vw;
+    --fld-fontsize: 6vw;
+    --description-fontsize: 3.5vw;
+    --footer-fontsize: 1.5;
 }
 
 * {
@@ -114,23 +119,16 @@ header {
     width: 100%;
 }
 
-  /*.spacefinal {
-    display: none;
+  .coverweb {
     height: auto;
     max-width: 100%;
   }
-
-  .spacefinalmobile {
-    display: none;
-    height: auto;
-    max-width: 100%;
-  }*/
   
   .headercontainer {
     pointer-events: none;
     position: absolute;
     width: 100%;
-    height: 90vh;
+    height: 100vw;
     top: 0;
   }
 
@@ -157,7 +155,7 @@ header {
       color: var(--nav-color);
       text-align: start;
       text-decoration: none;
-      font-size: 9vw;
+      font-size: var(--logo-fontsize);
       font-weight: lighter;
     }
   
@@ -176,7 +174,7 @@ header {
       color: var(--nav-color);
       text-align: center;
       text-decoration: none;
-      font-size: 4vw;
+      font-size: var(--profile-icons-fontsize);
       margin-left: 3vw;
     }
   
@@ -212,7 +210,7 @@ header {
     width: 15vw;
     color: var(--back-color);
     background-color: var(--nav-color);
-    font-size: 7vw;
+    font-size: var(--linkto-icons-fontsize);
     text-align: center;
     margin: 2% 0% 2% 0%;
     box-sizing: border-box;
@@ -228,84 +226,18 @@ header {
       color: var(--nav-hover-color);
     }
 
-  #modal {
-    background: var(--back-color-lighter);
-    display: none;
-    position: absolute;
-    top: 40vh;
-    width: 90%;
-    z-index: 999;
-    overflow: hidden;
-    transition: 0.25;
-    align-self: center;
-    border-radius: 4px;
-  }
-
-  .modal-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .modal-title {
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-    .modal-title h2 {
-      font-size: 6vw;
-      font-family: 'robotolight';
-      color: var(--nav-color);
-    }
-
-    .pp {
-      height: 20vw;
-      width: 20vw;
-      border-radius: 100%;
-      background-image: url("../assets/images/LGE/pp.jpeg");
-      background-clip: border-box;
-      background-position: center;
-      background-size: cover;
-    }
-  
-  .modal-content p {
-    font-size: 3vw;
-    font-family: 'robotolight';
-    color: var(--nav-color);
-  }
-  
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-
-      .headercontainer { height: 100vw; }
-
-  }
-
-  /* 1000 and down */
-  @media only screen and (max-width: 1000px) {
-      .spacefinal {
-          display: block;
-      }
-
-      .spacefinalmobile {
-          display: none;
+  /* Large devices (laptops/desktops, 900px and up) */
+  @media only screen 
+    and (min-width: 900px)
+    and (max-width: 1199px) {
+      :root {
+        --left-margin: 3vw;
       }
   }
 
-  /* 1000 and up */
-  @media only screen and (min-width: 1001px) {
-      .spacefinal {
-          display: block;
-      }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
 
-      .spacefinalmobile {
-          display: none;
-      }
   }
 
 /* BODY */
@@ -322,7 +254,7 @@ header {
   .wrapper span {
     font-family: 'slope_operaregular';
     color: var(--nav-color);
-    font-size: 6vw;
+    font-size: var(--fld-fontsize);
     text-align: start;
     margin: 5% var(--right-margin) 2% var(--left-margin);
   }
@@ -336,7 +268,7 @@ header {
 }
 
   .projectdescription p {
-    font-size: 3.5vw;
+    font-size: var(--description-fontsize);
     text-align: initial;
     color: var(--nav-color);
     font-weight: 300;
@@ -389,7 +321,7 @@ footer {
   footer span {
     font-family: 'montserratlight';
     font-stretch: expanded;
-    font-size: 1.5vw;
+    font-size: var(--footer-fontsize);
     letter-spacing: 0.4vw;
     color: white;
   }
