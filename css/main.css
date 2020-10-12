@@ -380,7 +380,7 @@ header {
   }
 
   .spotifypreview {
-    margin: 5%;
+    margin: 5% var(--right-margin) 5% var(--left-margin);
   }
 
   @keyframes makevisible {
