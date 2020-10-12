@@ -5,8 +5,16 @@ window.onscroll = function() {
     } else {
         nav.classList.remove("navbar1");
     }*/
-    console.log('scrolling');
+    document.getElementById("topbar").style.background = black;
 }
+
+window.onload(function(load) {
+    window.addEventListener('scroll', function(evt) {
+        console.log('test');
+    });
+});
+
+console.log('ok');
 
 function expandText() {
     document.getElementById("texttoexpand").style.display = "block";
