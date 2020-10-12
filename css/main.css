@@ -31,6 +31,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 /* BASICS */
 :root {
     --back-color: rgb(9,22,37);
@@ -38,6 +47,8 @@
     --nav-color: white;
     --nav-hover-color: rgba(119,113,247,1);
     --gradient-color:  rgba(68,26,135,0.94);
+    --left-margin: 12vw;
+    --right-margin: 6vw
 }
 
 * {
@@ -70,8 +81,7 @@ body {
   top: 0; 
   left: 0; 
   position: fixed;
-  background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(9,22,37,0.8) 40%, rgba(9,22,37,0.4) 100%);
-  opacity: 0.4;
+  background: linear-gradient(90deg, rgb(9,22,37, 0.75) 0%, rgba(9,22,37,0.5) 40%, rgba(9,22,37,0) 100%);
 }
 
 .overbody-2 {
@@ -137,6 +147,7 @@ header {
     height: 15vw;
     width: 100%;
     top: 0;
+    margin-top: var(--right-margin);
     display: flex;
     position: fixed;
     flex-direction: row;
@@ -148,14 +159,14 @@ header {
     pointer-events: visible;
     font-family: 'slope_operaregular';
     background-color: transparent;
-    margin-left: 5vw;
+    margin: auto var(--right-margin) auto var(--left-margin);
   }
   
     .logo a {
       color: var(--nav-color);
       text-align: start;
       text-decoration: none;
-      font-size: 7vw;
+      font-size: 9vw;
       font-weight: lighter;
     }
   
@@ -167,7 +178,7 @@ header {
   .topnav {
     pointer-events: visible;
     background-color: transparent;
-    margin-right: 5vw;
+    margin: auto var(--right-margin) auto var(--left-margin);
   }
   
     .topnav a {
@@ -175,7 +186,7 @@ header {
       color: var(--nav-color);
       text-align: center;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 4vw;
       padding-left: 12px;
     }
   
@@ -195,11 +206,11 @@ header {
   }
 
   .listentotitle {
-    font-family: 'slope_operaregular';
+    font-family: 'robotoregular';
     color: var(--nav-color);
     font-size: 6vw;
     text-align: start;
-    margin: 2% 0% 2% 5%;
+    margin: 0% var(--right-margin) 0% var(--left-margin);
   }
 
   .listentotitle span {
@@ -209,7 +220,8 @@ header {
   .links {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: auto var(--right-margin) auto var(--left-margin);
   }
 
   .linkto {
@@ -291,18 +303,18 @@ header {
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
 
-      .headercontainer { height: 120vw; }
+      .headercontainer { height: 100vw; }
 
   }
 
   /* 1000 and down */
   @media only screen and (max-width: 1000px) {
       .spacefinal {
-          display: none;
+          display: block;
       }
 
       .spacefinalmobile {
-          display: block;
+          display: none;
       }
   }
 
@@ -326,24 +338,31 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
 }
+
+  .wrapper span {
+    font-family: 'slope_operaregular';
+    color: var(--nav-color);
+    font-size: 6vw;
+    text-align: start;
+    margin: 5% var(--right-margin) 2% var(--left-margin);
+  }
 
 .projectdescription {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding: 5%;
+  padding: 0% var(--right-margin) 0% var(--left-margin);
   align-items: center;
 }
 
   .projectdescription p {
-    font-size: 3vw;
-    text-align: justify;
+    font-size: 3.5vw;
+    text-align: initial;
     color: var(--nav-color);
     font-weight: 300;
     margin-bottom: 0;
-    font-family: 'robotolight';
+    font-family: 'robotoregular';
   }
 
   #texttoexpand {
