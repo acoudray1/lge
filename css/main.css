@@ -186,7 +186,7 @@ header {
       color: var(--nav-hover-color);
     }
 
-  .bottombar {
+  #bottombar {
     width: 100%;
     height: auto;
     bottom: 0;
