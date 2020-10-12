@@ -47,8 +47,8 @@
     --nav-color: white;
     --nav-hover-color: rgba(119,113,247,1);
     --gradient-color:  rgba(68,26,135,0.94);
-    --left-margin: 12vw;
-    --right-margin: 6vw
+    --left-margin: 7vw;
+    --right-margin: 7vw
 }
 
 * {
@@ -365,6 +365,7 @@ header {
     animation-iteration-count:infinite;
     display: inline-block;
     height: 5vw;
+    margin: 5% var(--right-margin) 0% var(--left-margin);
   }
 
   .spotifypreview {
