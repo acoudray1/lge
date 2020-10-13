@@ -287,6 +287,17 @@ header {
     margin: 0% var(--right-margin) 5% var(--left-margin);
   }
 
+  #unexpand {
+    color: var(--nav-color);
+    cursor: pointer;
+    animation-name: makevisible;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    display: none;
+    height: 5vw;
+    margin: 5% var(--right-margin) 5% var(--left-margin);
+  }
+
   .spotifypreview {
     margin: 5% var(--right-margin) 5% var(--left-margin);
     height: var(--spotify-height);

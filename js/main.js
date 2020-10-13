@@ -28,6 +28,17 @@ function valueLimit(val, min, max) {
 function expandText() {
     document.getElementById("texttoexpand").style.display = "block";
     document.getElementById("expand").style.display = "none";
+    document.getElementById("unexpand").style.display = "inline-block";
+}
+
+/**
+ * "Unexpands" the text on the Future, Love & Death page
+ * 
+ */
+function unexpandText() {
+    document.getElementById("texttoexpand").style.display = "none";
+    document.getElementById("unexpand").style.display = "none";
+    document.getElementById("expand").style.display = "inline-block";
 }
 
 window.onscroll = function() {
