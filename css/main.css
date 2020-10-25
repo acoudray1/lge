@@ -437,4 +437,8 @@ and (max-width: 899px) {
     .projectdescription {
       padding-right: 0;
     }
+
+    .spotifypreview {
+      width: 400px;
+    }
   }
