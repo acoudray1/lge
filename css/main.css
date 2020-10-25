@@ -46,7 +46,7 @@
     --linkto-icons-fontsize: 7vw;
     --fld-fontsize: 6vw;
     --description-fontsize: 3.5vw;
-    --footer-fontsize: 1.3vw;
+    --footer-fontsize: 1.2vw;
     --header-height: 100vw;
     --spotify-height: 120vw;
 }
@@ -330,12 +330,27 @@ footer {
     font-family: 'montserratlight';
     font-stretch: expanded;
     font-size: var(--footer-fontsize);
-    letter-spacing: 0.4vw;
+    letter-spacing: 0.3vw;
     color: white;
   }
 
 /* RESPONSIVITY */
 
+@media only screen 
+and (min-width: 600px)
+and (max-width: 899px) {
+
+  #bottombar {
+    padding: 0vw 10vw 0vw 10vw;
+  }
+
+  .linkto {
+    height: 8vw;
+    width: 8vw;
+    font-size: 4vw;
+  }
+
+}
   /* Large devices (laptops/desktops, 900px and up) */
   @media only screen 
     and (min-width: 900px)
@@ -355,9 +370,14 @@ footer {
         padding: 4vw 0% 4vw 0%;
       }
 
+      #bottombar {
+        padding: 0vw 10vw 0vw 10vw;
+      }
+    
       .linkto {
-        height: 12vw;
-        width: 12vw;
+        height: 8vw;
+        width: 8vw;
+        font-size: 4vw;
       }
 
       .wrapper {
@@ -393,9 +413,14 @@ footer {
       padding: 4vw 0% 4vw 0%;
     }
 
+    #bottombar {
+      padding: 0vw 10vw 0vw 10vw;
+    }
+  
     .linkto {
       height: 8vw;
       width: 8vw;
+      font-size: 4vw;
     }
 
     .wrapper {
