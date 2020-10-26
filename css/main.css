@@ -48,7 +48,7 @@
     --description-fontsize: 3.5vw;
     --footer-fontsize: 1.2vw;
     --header-height: 100vw;
-    --spotify-height: 120vw;
+    --spotify-height: 450px;
 }
 
 * {
@@ -367,6 +367,10 @@ footer {
 and (min-width: 600px)
 and (max-width: 899px) {
 
+  :root {
+    --footer-fontsize: 0.9vw;
+  }
+
   .cover-mobile {
     display: block;
   }
@@ -396,9 +400,8 @@ and (max-width: 899px) {
       --linkto-icons-fontsize: 5vw;
       --fld-fontsize: 3.5vw;
       --description-fontsize: 2vw;
-      --footer-fontsize: 0.8vw;
-      --header-height: 100vw; /* TODO REMOVE SI = 100vw */
-      --spotify-height: 50vw;
+      --footer-fontsize: 0.7vw;
+      --header-height: 60vw;
     }
 
     .cover-mobile {
@@ -437,6 +440,10 @@ and (max-width: 899px) {
     .projectdescription {
       padding-right: 0;
     }
+
+    footer span {
+      letter-spacing: 0.2vw;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1100px and up) */
@@ -448,8 +455,7 @@ and (max-width: 899px) {
     --fld-fontsize: 2.5vw;
     --description-fontsize: 1vw;
     --footer-fontsize: 0.6vw;
-    --header-height: 100vh; /* TODO REMOVE SI = 100vw */
-    --spotify-height: 30vw;
+    --header-height: 60vw;
   }
 
   .cover-mobile {
@@ -491,5 +497,9 @@ and (max-width: 899px) {
 
   .spotifypreview {
     width: 400px;
+  }
+
+  footer span {
+    letter-spacing: 0.1vw;
   }
 }
