@@ -247,7 +247,7 @@ header {
   justify-content: space-between;
 }
 
-  .about span {
+  .about-title {
     font-family: 'slope_operaregular';
     color: var(--nav-color);
     font-size: var(--fld-fontsize);
@@ -262,6 +262,10 @@ header {
   padding: 0% var(--right-margin) 0% var(--left-margin);
   align-items: center;
 }
+
+  .description-album-name {
+    font-style: italic;
+  }
 
   .projectdescription p {
     font-size: var(--description-fontsize);
