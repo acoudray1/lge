@@ -3,6 +3,8 @@ _website made from scratch_
 
 url: [futurelovedeath.org](https://futurelovedeath.org)
 
+![qrcode](https://octodex.github.com/images/yaktocat.png =250x)
+
 ## Notes perso
 -> Pour générer les images responsives : https://www.responsivebreakpoints.com/
 
