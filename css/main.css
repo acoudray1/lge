@@ -121,7 +121,12 @@ header {
     width: 100%;
 }
 
-  .coverweb {
+  .cover-mobile {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .cover-large {
     height: auto;
     max-width: 100%;
   }
@@ -283,7 +288,7 @@ header {
   #expand {
     color: var(--nav-color);
     cursor: pointer;
-    animation-name: makevisible;
+    animation-name: makevisibledown;
     animation-duration: 4s;
     animation-iteration-count:infinite;
     display: inline-block;
@@ -294,7 +299,7 @@ header {
   #unexpand {
     color: var(--nav-color);
     cursor: pointer;
-    animation-name: makevisible;
+    animation-name: makevisibleup;
     animation-duration: 4s;
     animation-iteration-count:infinite;
     display: none;
@@ -307,12 +312,20 @@ header {
     height: var(--spotify-height);
   }
 
-  @keyframes makevisible {
+  @keyframes makevisibledown {
     0% {opacity: 67%; font-size: 4vw;}
     25% {opacity: 100%; font-size: 5vw;}
     50% {opacity: 67%; font-size: 4vw;}
     75% {opacity: 100%; font-size: 5vw;}
     100% {opacity: 67%; font-size: 4vw;}
+  }
+
+  @keyframes makevisibleup {
+    0% {opacity: 67%; font-size: 5vw;}
+    25% {opacity: 100%; font-size: 4vw;}
+    50% {opacity: 67%; font-size: 5vw;}
+    75% {opacity: 100%; font-size: 4vw;}
+    100% {opacity: 67%; font-size: 5vw;}
   }
 
 /* FOOTER */
@@ -340,9 +353,27 @@ footer {
 
 /* RESPONSIVITY */
 
+@media only screen and (max-width: 599px) {
+  .cover-mobile {
+    display: block;
+  }
+
+  .cover-large {
+    display: none;
+  }
+}
+
 @media only screen 
 and (min-width: 600px)
 and (max-width: 899px) {
+
+  .cover-mobile {
+    display: block;
+  }
+
+  .cover-large {
+    display: none;
+  }
 
   #bottombar {
     padding: 0vw 10vw 0vw 10vw;
@@ -355,62 +386,27 @@ and (max-width: 899px) {
   }
 
 }
-  /* Large devices (laptops/desktops, 900px and up) */
-  @media only screen 
-    and (min-width: 900px)
-    and (max-width: 1099px) {
-      :root {
-        --logo-fontsize: 6vw;
-        --profile-icons-fontsize: 3vw;
-        --linkto-icons-fontsize: 5vw;
-        --fld-fontsize: 3.5vw;
-        --description-fontsize: 2vw;
-        --footer-fontsize: 0.8vw;
-        --header-height: 100vw; /* TODO REMOVE SI = 100vw */
-        --spotify-height: 50vw;
-      }
-
-      #topbar {
-        padding: 4vw 0% 4vw 0%;
-      }
-
-      #bottombar {
-        padding: 0vw 10vw 0vw 10vw;
-      }
-    
-      .linkto {
-        height: 8vw;
-        width: 8vw;
-        font-size: 4vw;
-      }
-
-      .wrapper {
-        margin-bottom: 7vw;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .about {
-        width: 70vw;
-      }
-
-      .projectdescription {
-        padding-right: 0;
-      }
-  }
-
-  /* Extra large devices (large laptops and desktops, 1100px and up) */
-  @media only screen and (min-width: 1100px) {
+/* Large devices (laptops/desktops, 900px and up) */
+@media only screen 
+  and (min-width: 900px)
+  and (max-width: 1099px) {
     :root {
-      --logo-fontsize: 5vw;
-      --profile-icons-fontsize: 2vw;
-      --linkto-icons-fontsize: 3vw;
-      --fld-fontsize: 2.5vw;
-      --description-fontsize: 1vw;
-      --footer-fontsize: 0.6vw;
+      --logo-fontsize: 6vw;
+      --profile-icons-fontsize: 3vw;
+      --linkto-icons-fontsize: 5vw;
+      --fld-fontsize: 3.5vw;
+      --description-fontsize: 2vw;
+      --footer-fontsize: 0.8vw;
       --header-height: 100vw; /* TODO REMOVE SI = 100vw */
-      --spotify-height: 30vw;
+      --spotify-height: 50vw;
+    }
+
+    .cover-mobile {
+      display: none;
+    }
+  
+    .cover-large {
+      display: block;
     }
 
     #topbar {
@@ -435,14 +431,65 @@ and (max-width: 899px) {
     }
 
     .about {
-      width: 60vw;
+      width: 70vw;
     }
 
     .projectdescription {
       padding-right: 0;
     }
+}
 
-    .spotifypreview {
-      width: 400px;
-    }
+/* Extra large devices (large laptops and desktops, 1100px and up) */
+@media only screen and (min-width: 1100px) {
+  :root {
+    --logo-fontsize: 5vw;
+    --profile-icons-fontsize: 2vw;
+    --linkto-icons-fontsize: 3vw;
+    --fld-fontsize: 2.5vw;
+    --description-fontsize: 1vw;
+    --footer-fontsize: 0.6vw;
+    --header-height: 100vh; /* TODO REMOVE SI = 100vw */
+    --spotify-height: 30vw;
   }
+
+  .cover-mobile {
+    display: none;
+  }
+
+  .cover-large {
+    display: block;
+  }
+
+  #topbar {
+    padding: 4vw 0% 4vw 0%;
+  }
+
+  #bottombar {
+    padding: 0vw 10vw 0vw 10vw;
+  }
+
+  .linkto {
+    height: 8vw;
+    width: 8vw;
+    font-size: 4vw;
+  }
+
+  .wrapper {
+    margin-bottom: 7vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about {
+    width: 60vw;
+  }
+
+  .projectdescription {
+    padding-right: 0;
+  }
+
+  .spotifypreview {
+    width: 400px;
+  }
+}
