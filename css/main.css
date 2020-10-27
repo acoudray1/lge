@@ -374,7 +374,10 @@ and (min-width: 600px)
 and (max-width: 899px) {
 
   :root {
-    --footer-fontsize: 0.9vw;
+    --logo-fontsize: 6vw;
+    --profile-icons-fontsize: 3vw;
+    --footer-fontsize: 0.8vw;
+    --description-fontsize: 2vw;
   }
 
   #cover-mobile {
@@ -394,6 +397,10 @@ and (max-width: 899px) {
     width: 10.5vw;
     font-size: 4vw;
   }
+
+  footer span {
+    letter-spacing: 0.2vw;
+  }
 }
 
 /* Large devices (laptops/desktops, 900px and up) */
@@ -405,8 +412,8 @@ and (max-width: 899px) {
       --profile-icons-fontsize: 3vw;
       --linkto-icons-fontsize: 5vw;
       --fld-fontsize: 3.5vw;
-      --description-fontsize: 2vw;
-      --footer-fontsize: 0.7vw;
+      --description-fontsize: 1.5vw;
+      --footer-fontsize: 0.6vw;
       --header-height: 60vw;
     }
 
