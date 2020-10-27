@@ -82,7 +82,9 @@ window.onscroll = function() {
     if (getComputedStyle(coverlarge).display == "block") {
         if (bottombar.style.position == "fixed" && bottombarOffset.bottom >= coverlarge.offsetHeight) {
             bottombar.style.position = "absolute";
-        }
+        } /*else if (bottombar.style.position == "absolute" && screen.height - window.pageYOffset >= coverlarge.offsetHeight) {
+            bottombar.style.position = "fixed";
+        }*/
     } else {
         bottombar.style.position = "absolute";
     }
