@@ -7,7 +7,7 @@ function offset(el) {
     var rect = el.getBoundingClientRect(),
     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft, bottom: scrollTop + el.offsetHeight }
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft, bottom: rect.top + scrollTop + el.offsetHeight }
 }
 
 /**
@@ -41,15 +41,49 @@ function unexpandText() {
     document.getElementById("expand").style.display = "inline-block";
 }
 
+window.onload = function() {
+    // mise à l'échelle du header container
+    let coverlarge = document.getElementById("cover-large");
+    let covermobile = document.getElementById("cover-mobile");
+    let headercontainer = document.getElementById("headercontainer");
+
+    headercontainer.style.height = getComputedStyle(coverlarge).display == "block" ? coverlarge.offsetHeight + "px" : covermobile.offsetHeight + "px";
+
+    if (getComputedStyle(coverlarge).display == "block") {
+        if (window.innerHeight > coverlarge.offsetHeight) {
+            bottombar.style.position = "absolute";
+        } else if (window.innerHeight <= coverlarge.offsetHeight) {
+            bottombar.style.position = "fixed";
+        }
+    }
+
+    bottombar.style.display = "flex";
+}
+
 window.onscroll = function() {
-    let topbarOffset = offset(document.getElementById("topbar"));
-    let bottombarOffset = offset(document.getElementById("bottombar"));
-    let bottombarHeight = document.getElementById("bottombar").offsetHeight;
+    let topbar = document.getElementById("topbar");
+    let bottombar = document.getElementById("bottombar");
+
+    // topbar color
+    let topbarOffset = offset(topbar);
+    let bottombarOffset = offset(bottombar);
+    let bottombarHeight = bottombar.offsetHeight;
     let opacity = 0;
     if (topbarOffset.bottom < bottombarOffset.top) {
-        document.getElementById("topbar").style.background = "transparent";
+        topbar.style.background = "transparent";
     } else if (topbarOffset.bottom >= bottombarOffset.top) {
         opacity = valueLimit((topbarOffset.bottom - bottombarOffset.top) / bottombarHeight, 0, 1);
-        document.getElementById("topbar").style.background = "rgb(9,22,37," + opacity + ")";
+        topbar.style.background = "rgb(9,22,37," + opacity + ")";
+    }
+
+    // bottombar position 
+    let coverlarge = document.getElementById("cover-large");
+
+    if (getComputedStyle(coverlarge).display == "block") {
+        if (bottombar.style.position == "fixed" && bottombarOffset.bottom >= coverlarge.offsetHeight) {
+            bottombar.style.position = "absolute";
+        }
+    } else {
+        bottombar.style.position = "absolute";
     }
 }

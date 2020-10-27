@@ -121,22 +121,24 @@ header {
     width: 100%;
 }
 
-  .cover-mobile {
+  #cover-mobile {
     height: auto;
     max-width: 100%;
   }
 
-  .cover-large {
+  #cover-large {
     height: auto;
     max-width: 100%;
   }
   
-  .headercontainer {
+  #headercontainer {
     pointer-events: none;
     position: absolute;
     width: 100%;
-    height: var(--header-height);
     top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
   }
 
   #topbar {
@@ -193,10 +195,9 @@ header {
   #bottombar {
     z-index: 30;
     width: 100%;
-    height: auto;
-    bottom: 0;
-    display: flex;
     position: absolute;
+    bottom: 0;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
   }
@@ -308,8 +309,13 @@ header {
   }
 
   .spotifypreview {
-    margin: 5% var(--right-margin) 5% var(--left-margin);
+    margin: 0% var(--right-margin) 5% var(--left-margin);
     height: var(--spotify-height);
+  }
+
+  @keyframes makevisiblelinks {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
   }
 
   @keyframes makevisibledown {
@@ -354,11 +360,11 @@ footer {
 /* RESPONSIVITY */
 
 @media only screen and (max-width: 599px) {
-  .cover-mobile {
+  #cover-mobile {
     display: block;
   }
 
-  .cover-large {
+  #cover-large {
     display: none;
   }
 }
@@ -371,11 +377,11 @@ and (max-width: 899px) {
     --footer-fontsize: 0.9vw;
   }
 
-  .cover-mobile {
+  #cover-mobile {
     display: block;
   }
 
-  .cover-large {
+  #cover-large {
     display: none;
   }
 
@@ -388,8 +394,8 @@ and (max-width: 899px) {
     width: 10.5vw;
     font-size: 4vw;
   }
-
 }
+
 /* Large devices (laptops/desktops, 900px and up) */
 @media only screen 
   and (min-width: 900px)
@@ -404,11 +410,11 @@ and (max-width: 899px) {
       --header-height: 60vw;
     }
 
-    .cover-mobile {
+    #cover-mobile {
       display: none;
     }
   
-    .cover-large {
+    #cover-large {
       display: block;
     }
 
@@ -431,10 +437,11 @@ and (max-width: 899px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      padding: 0vw 3vw;
     }
 
     .about {
-      width: 70vw;
+      width: 40vw;
     }
 
     .projectdescription {
@@ -458,11 +465,11 @@ and (max-width: 899px) {
     --header-height: 60vw;
   }
 
-  .cover-mobile {
+  #cover-mobile {
     display: none;
   }
 
-  .cover-large {
+  #cover-large {
     display: block;
   }
 
@@ -485,10 +492,11 @@ and (max-width: 899px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0vw 3vw;
   }
 
   .about {
-    width: 60vw;
+    width: 40vw;
   }
 
   .projectdescription {
@@ -496,7 +504,7 @@ and (max-width: 899px) {
   }
 
   .spotifypreview {
-    width: 400px;
+    width: 500px;
   }
 
   footer span {
