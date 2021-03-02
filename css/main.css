@@ -333,6 +333,8 @@ header {
   }
 
   .yt-videos-preview {
+    height: auto;
+    position: relative;
     z-index: 30;
     width: 100%;
     display: flex;
