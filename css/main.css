@@ -343,10 +343,22 @@ header {
     align-items: center;
   }
 
-  .yt-video {
+  .videoWrapper {
+    position: relative;
+    overflow: hidden;
     width: 90%;
-    height: auto;
-    padding-bottom: 4%;
+    padding-top: 56.25%;
+    margin: 2% 0% 2% 0%;
+  }
+  
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
   }
 
 /* FOOTER */
@@ -424,11 +436,6 @@ and (max-width: 899px) {
     width: 500px;
   }
 
-  .yt-video {
-    width: 720px;
-    height: 480px;
-  }
-
   footer span {
     letter-spacing: 0.2vw;
   }
@@ -476,11 +483,6 @@ and (max-width: 899px) {
       justify-content: space-between;
       align-items: center;
       padding: 0vw 3vw;
-    }
-
-    .yt-video {
-      width: 720px;
-      height: 480px;
     }
 
     #expand {
@@ -556,11 +558,6 @@ and (max-width: 899px) {
 
   .spotifypreview {
     width: 500px;
-  }
-
-  .yt-video {
-    width: 1280px;
-    height: 720px;
   }
 
   #expand {
